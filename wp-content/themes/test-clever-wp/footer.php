@@ -5,8 +5,8 @@
                 <a href="#"><img src="<?= DIRECT ?>img/logo.png" alt="logo"></a>
             </div>
             <div class="more-info">
-                <p><a href="mailto:info@domain.com">info@domain.com</a></p>
-                <p>Mon-Fri: 09:00 am - 06:00 pm</p>
+                <p><a href="mailto:<?= get_field('email_for_message_footer', 'option') ?>"><?= get_field('email_for_message_footer', 'option') ?></a></p>
+                <p><?= get_field('schedule_footer', 'option') ?></p>
             </div>
         </div>
 
@@ -47,14 +47,17 @@
     </div>
     <div class="site-footer__copyright">
         <div class="layout">
-            <p>Copyright <?php echo date('Y'); ?> <a href="#">Clever 111 Solunion</a> <span>|</span>  All Rights Reserved</p>
+            <p>Copyright <?php echo date('Y'); ?> <a href="#">Clever Solution</a> <span>|</span>  All Rights Reserved</p>
+            <?php if( have_rows('social_links', 'option') ): ?>
             <ul class="social-links">
-                <li><a href="#"><img src="<?= DIRECT ?>img/facebook.png" alt="facebook"></a></li>
-                <li><a href="#"><img src="<?= DIRECT ?>img/twitter.png" alt="twitter"></a></li>
-                <li><a href="#"><img src="<?= DIRECT ?>img/linked-in.png" alt="linked-in"></a></li>
-                <li><a href="#"><img src="<?= DIRECT ?>img/rss.png" alt="res"></a></li>
-                <li><a href="#"><img src="<?= DIRECT ?>img/dribbble.png" alt="dribbble"></a></li>
+                <?php while ( have_rows('social_links', 'option') ) : the_row();
+                $url = get_sub_field('social_link');
+                $image = get_sub_field('social_icon'); ?>
+
+                <li><a href="<?= $url; ?>"><img src="<?= $image; ?>" alt="<?php echo esc_attr($image['alt']); ?>"></a></li>
+                <?php endwhile; ?>
             </ul>
+            <?php endif; ?>
         </div>
     </div>
 </footer>
