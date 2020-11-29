@@ -1,9 +1,8 @@
 ### **WP-theme**
 
 1. Утановить файл wp-config. Создать можно на сайте https://wp-config.pro/
-2. Обновить файл .gitignore
-3. База - test-clever-wp.sql (находиться в самом проекте)
-4. Логин - admin, Пароль - qA!4K0gwp@aUjAH20Y
+2. База - test-clever-wp.sql (находиться в самом проекте)
+3. Логин - admin, Пароль - qA!4K0gwp@aUjAH20Y
 
 
 Все функции написаны отдельно, в файле - actions.php, который находиться в 
