@@ -47,7 +47,7 @@
     </div>
     <div class="site-footer__copyright">
         <div class="layout">
-            <p>Copyright 2019 <a href="#">Clever Solunion</a> <span>|</span>  All Rights Reserved</p>
+            <p>Copyright <?php echo date('Y'); ?> <a href="#">Clever Solunion</a> <span>|</span>  All Rights Reserved</p>
             <ul class="social-links">
                 <li><a href="#"><img src="<?= DIRECT ?>img/facebook.png" alt="facebook"></a></li>
                 <li><a href="#"><img src="<?= DIRECT ?>img/twitter.png" alt="twitter"></a></li>
