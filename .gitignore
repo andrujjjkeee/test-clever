@@ -1,4 +1,4 @@
-wp-content/uploads/
+
 wp-content/themes/twentytwenty/
 wp-content/themes/twentynineteen/
 wp-content/themes/twentyseventeen/
@@ -6,7 +6,7 @@ wp-content/themes/*/assets/*.html
 
 # Node artifact files
 node_modules/
-dist/
+
 
 # Compiled Java class files
 *.class
@@ -22,7 +22,7 @@ dist/
 
 # Maven
 target/
-dist/
+
 
 # JetBrains IDE
 .idea/
